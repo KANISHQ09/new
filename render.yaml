@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ipl-auction-backend
+    env: node
+    region: oregon
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 22.18.0
+      - key: PORT
+        value: 3001
+      - key: CORS_ORIGIN
+        value: https://client-inky-six-75.vercel.app
